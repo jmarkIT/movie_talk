@@ -1,0 +1,25 @@
+[project]
+name = "movie_talk"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "James Mark", email = "james.david.mark@gmail.com"},
+]
+dependencies = [
+    "requests>=2.31.0",
+]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.dev-dependencies]
+lint = [
+    "types-requests>=2.31.0.20240125",
+    "mypy>=1.8.0",
+    "pylint>=3.0.3",
+    "ruff>=0.2.1",
+]
