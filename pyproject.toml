@@ -2,16 +2,20 @@
 name = "movie_talk"
 version = "0.1.0"
 description = "Default template for PDM package"
-authors = [
-    {name = "James Mark", email = "james.david.mark@gmail.com"},
-]
+authors = [{ name = "James Mark", email = "james.david.mark@gmail.com" }]
 dependencies = [
     "requests>=2.31.0",
+    "django>=5.0.3",
+    "pylint-django>=2.5.5",
+    "psycopg[binary]>=3.1.18",
 ]
 requires-python = "==3.12.*"
 readme = "README.md"
-license = {text = "MIT"}
+license = { text = "MIT" }
 
+[tool.pdm.scripts]
+start = "python manage.py runserver"
+shell = "python manage.py shell"
 
 [tool.pdm]
 distribution = false
