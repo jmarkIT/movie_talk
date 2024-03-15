@@ -16,6 +16,8 @@ license = { text = "MIT" }
 [tool.pdm.scripts]
 start = "python manage.py runserver"
 shell = "python manage.py shell"
+migrate = "python manage.py migrate"
+makemigrations = "python manage.py makemigrations"
 
 [tool.pdm]
 distribution = false
