@@ -1,0 +1,7 @@
+{% extends 'albums/base.html' %} {% block 'body' %}
+<h1>{{ album.title }}</h1>
+<ul>
+  <li>Artist: {{ album.artist }}</li>
+  <li>Genres: {{ album.genres }}</li>
+</ul>
+{% endblock %}

@@ -1,7 +1,19 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
+
 # Create your models here.
+class Selection(models.Model):
+    movie = models.ForeignKey(
+        "Movie",
+        on_delete=models.CASCADE,
+    )
+    album = models.ForeignKey(
+        "Album",
+        on_delete=models.CASCADE,
+    )
+    date = models.DateField()
+    owner = models.CharField()
 
 
 class Movie(models.Model):
@@ -14,6 +26,16 @@ class Movie(models.Model):
     just_watch_link = models.CharField("JustWatch Link")
     wiki_link = models.CharField("Wikipedia Link")
     imdb_link = models.CharField("IMDB Link")
+
+    def __str__(self):
+        return self.title
+
+
+class Album(models.Model):
+    slug = models.CharField()
+    title = models.CharField()
+    artist = models.CharField()
+    genres = ArrayField(base_field=models.CharField())
 
     def __str__(self):
         return self.title
