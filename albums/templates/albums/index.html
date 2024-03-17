@@ -1,7 +1,0 @@
-{% extends 'albums/base.html' %} {% block 'body' %}
-<ul>
-  {% for album in list_of_albums %}
-  <li><a href="{% url 'albums:detail' album.slug %}">{{ album.title }}</a></li>
-  {% endfor %}
-</ul>
-{% endblock %}

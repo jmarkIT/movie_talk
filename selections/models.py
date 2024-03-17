@@ -15,6 +15,9 @@ class Selection(models.Model):
     date = models.DateField()
     owner = models.CharField()
 
+    def __str__(self):
+        return f"{self.movie.title} & {self.album.title}"
+
 
 class Movie(models.Model):
     slug = models.CharField()
