@@ -8,6 +8,7 @@ dependencies = [
     "django>=5.0.3",
     "pylint-django>=2.5.5",
     "psycopg[binary]>=3.1.18",
+    "gunicorn>=21.2.0",
 ]
 requires-python = "==3.12.*"
 readme = "README.md"
