@@ -1,0 +1,11 @@
+{% extends 'selections/base.html' %} {% block 'content' %}
+<ul>
+  {% for movie in list_of_movies %}
+  <li>
+    <a href="{% url 'selections:movies_detail' movie.slug %}"
+      >{{ movie.title }}</a
+    >
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

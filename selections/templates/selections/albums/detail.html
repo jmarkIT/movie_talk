@@ -1,0 +1,7 @@
+{% extends 'selections/base.html' %} {% block 'content' %}
+<h1>{{ album.title }}</h1>
+<ul>
+  <li>Artist: {{ album.artist }}</li>
+  <li>Genres: {{ album.genres|join:", " }}</li>
+</ul>
+{% endblock %}

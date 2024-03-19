@@ -1,7 +1,11 @@
-{% extends 'albums/base.html' %} {% block 'body' %}
+{% extends 'selections/base.html' %} {% block 'content' %}
 <ul>
-  {% for album in list_of_albums %}
-  <li><a href="{% url 'albums:detail' album.slug %}">{{ album.title }}</a></li>
+  {% for selection in list_of_selections %}
+  <li>
+    <a href="{% url 'selections:detail' selection.id %}"
+      >{{ selection.movie.title }} &amp; {{ selection.album.title }}</a
+    >
+  </li>
   {% endfor %}
 </ul>
 {% endblock %}

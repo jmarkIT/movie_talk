@@ -1,4 +1,16 @@
-<a href="{% url 'albums:index' %}">Home</a>
-<body>
-  {% block 'body' %} {% endblock %}
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Page Title{% endblock %}</title>
+  </head>
+  <body>
+    <div role="navigation">
+      <a href="{% url 'selections:index' %}">Home</a>
+      <a href="{% url 'selections:movies_index' %}">Movies</a>
+      <a href="{% url 'selections:albums_index' %}">Albums</a>
+    </div>
+    {% block 'content' %}{% endblock %}
+  </body>
+</html>

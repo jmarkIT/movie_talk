@@ -16,6 +16,9 @@ class Selection(models.Model):
     owner = models.CharField()
 
     def __str__(self):
+        return self.get_title()
+
+    def get_title(self):
         return f"{self.movie.title} & {self.album.title}"
 
 

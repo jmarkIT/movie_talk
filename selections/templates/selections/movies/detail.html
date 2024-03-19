@@ -1,0 +1,15 @@
+{% extends 'selections/base.html' %} {% block 'content' %}
+<h1>{{ movie.title }}</h1>
+<ul>
+  <li>Director by: {{ movie.director }}</li>
+  <li>Cinematrophy by: {{ movie.cinematographer }}</li>
+  <li>Written by: {{ movie.writer|join:", "}}</li>
+  <li>Genres: {{ movie.genre|join:", "}}</li>
+</ul>
+<h2>Links</h2>
+<ul>
+  <li><a href="{{ movie.just_watch_link }}">JustWatch</a></li>
+  <li><a href="{{ movie.wiki_link }}">Wikipedia</a></li>
+  <li><a href="{{ movie.imdb_link }}">IMDB</a></li>
+</ul>
+{% endblock %}

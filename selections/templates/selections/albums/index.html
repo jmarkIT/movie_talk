@@ -1,0 +1,11 @@
+{% extends 'selections/base.html' %} {% block 'content' %}
+<ul>
+  {% for album in list_of_albums %}
+  <li>
+    <a href="{% url 'selections:albums_detail' album.slug %}"
+      >{{ album.title }}</a
+    >
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

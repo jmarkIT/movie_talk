@@ -1,7 +1,3 @@
-{% extends 'albums/base.html' %} {% block 'body' %}
-<h1>{{ album.title }}</h1>
-<ul>
-  <li>Artist: {{ album.artist }}</li>
-  <li>Genres: {{ album.genres }}</li>
-</ul>
+{% extends 'selections/base.html' %} {% block 'content'%}
+<h1>{{ selection.movie.title }} &amp; {{ selection.album.title }}</h1>
 {% endblock %}
