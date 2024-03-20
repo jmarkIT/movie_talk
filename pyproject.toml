@@ -15,7 +15,8 @@ readme = "README.md"
 license = { text = "MIT" }
 
 [tool.pdm.scripts]
-start = "python manage.py runserver"
+start.cmd = "python manage.py runserver"
+start.env_file = ".env"
 shell = "python manage.py shell"
 migrate = "python manage.py migrate"
 makemigrations = "python manage.py makemigrations"
