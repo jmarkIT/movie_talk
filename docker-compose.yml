@@ -21,7 +21,7 @@ services:
     expose:
       - '8000'
     volumes:
-      - .:/app
+      - static_volume:/home/app/web/staticfiles
     environment:
       - DJANGO_ENV=${DJANGO_ENV}
       - DATABASE_NAME=${DATABASE_NAME}
@@ -34,6 +34,8 @@ services:
   nginx:
     restart: unless-stopped
     build: ./nginx
+    volumes:
+      - static_volume:/home/app/web/staticfiles
     ports:
       - 1337:80
     depends_on:
