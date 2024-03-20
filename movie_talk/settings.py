@@ -28,6 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+hosts = os.environ.get("ALLOWED_HOSTS")
+if hosts:
+    ALLOWED_HOSTS = [hosts]
+
 
 # Application definition
 
