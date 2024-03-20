@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   my-postgres:
+    restart: unless-stopped
     image: postgres:latest
     container_name: db
     environment:
@@ -14,6 +15,7 @@ services:
       - pg_data:/var/lib/postgresql/data
 
   web:
+    restart: unless-stopped
     build: .
     container_name: django
     expose:
@@ -30,6 +32,7 @@ services:
     depends_on:
       - my-postgres
   nginx:
+    restart: unless-stopped
     build: ./nginx
     ports:
       - 1337:80
