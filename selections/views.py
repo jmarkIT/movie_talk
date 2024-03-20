@@ -17,7 +17,7 @@ class IndexView(generic.ListView):
         return Selection.objects.order_by("date")
 
 
-class DetailView(generic.ListView):
+class DetailView(generic.DetailView):
     model = Selection
     template_name = "selections/detail.html"
 

@@ -1,3 +1,17 @@
 {% extends 'selections/base.html' %} {% block 'content'%}
 <h1>{{ selection.movie.title }} &amp; {{ selection.album.title }}</h1>
+<ul>
+  <li>
+    Movie:
+    <a href="{% url 'selections:movies_detail' selection.movie.slug %}"
+      >{{ selection.movie.title }}</a
+    >
+  </li>
+  <li>
+    Album:
+    <a href="{% url 'selections:albums_detail' selection.album.slug %}"
+      >{{ selection.album.title }}</a
+    >
+  </li>
+</ul>
 {% endblock %}
