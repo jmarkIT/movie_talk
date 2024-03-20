@@ -15,11 +15,18 @@ readme = "README.md"
 license = { text = "MIT" }
 
 [tool.pdm.scripts]
+# Run the server
 start.cmd = "python manage.py runserver"
 start.env_file = ".env"
-shell = "python manage.py shell"
-migrate = "python manage.py migrate"
-makemigrations = "python manage.py makemigrations"
+# Enter the Python shell
+shell.cmd = "python manage.py shell"
+shell.env_file = ".env"
+# Run any available migraionts
+migrate.env_file = ".env"
+migrate.cmd = "python manage.py migrate"
+# Create migrations from Model updates
+makemigrations.cmd = "python manage.py makemigrations"
+makemigrations.env_file = ".env"
 
 [tool.pdm]
 distribution = false
